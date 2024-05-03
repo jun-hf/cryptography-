@@ -8,10 +8,10 @@ func sBox(b byte) (byte, error) {
 	// build a lookup table 
 	// convert the relevant byte to the index the row and column 
 	box := [][]byte{
-		[]byte{0, 2, 1, 3},
-		[]byte{2, 0, 3, 1},
-		[]byte{1, 3, 0, 2},
-		[]byte{3, 1, 2, 0},
+		{0, 2, 1, 3},
+		{2, 0, 3, 1},
+		{1, 3, 0, 2},
+		{3, 1, 2, 0},
 	}
 
 	row := (b >> 2) & 3
